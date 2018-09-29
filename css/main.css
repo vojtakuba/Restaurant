@@ -192,8 +192,38 @@ header nav ul li a:hover{
 
 
 
+/* popis content */
 
+.popis_content {
+    color: #fff;
+    font-family: "Gunny";
+    margin-top: 30px;
+    font-size: 50px;
+}
 
+.popis_message {
+    color: #FFF;
+    font-family: "Gunny";
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+/* open hours */
+
+.open_hour {
+    color: yellow;
+    font-family: "aleo-regular";
+    margin-top: 10px;
+    font-size: xx-large
+}
+/* opening hours */
+
+.opening_hours {
+    color:orange;
+    font-family: "aleo-regular";
+    margin-top: 40px;
+    font-size: xx-large;
+}
 
 
 
@@ -212,7 +242,7 @@ header nav ul li a:hover{
 
 .hero .caption{
     text-align: center;
-    margin-top: 220px;
+    margin-top: 100px;
 }
 
 .hero .caption h3{
@@ -227,7 +257,7 @@ header nav ul li a:hover{
 
 .hero .caption h4{
     color: #fff;
-    font-family: "wcmanonegrabta";
+    font-family: "Gunny";
     font-size: 50px;
     position: relative;
     display: inline-block;
