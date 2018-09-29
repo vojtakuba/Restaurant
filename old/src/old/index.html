@@ -1,0 +1,28 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            background: transparent url("menu_background.png") top left no-repeat;
+            min-height: 1088px;
+            height: auto}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function() {
+            $.get('text.txt', function(data) {
+                let rozdelenaData = data.split(';');
+                let jmena = '';
+                for(let i = 0;i<rozdelenaData.length - 2;i = i + 3)
+                {
+                    var txt3 = document.createElement("p");  // Create with DOM
+                    txt3.innerHTML = '<span style="color:blue">' + rozdelenaData[i] + '</span>' + rozdelenaData[i + 1] + rozdelenaData[i + 2];
+                    $("body").append (txt3);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="text-file-container"></div>
+</body>
+</html>
