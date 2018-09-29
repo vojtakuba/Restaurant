@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Resto - HTML5/CSS3 Restaurant Home Page Website Template</title>
-	<meta charset="utf-8">
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	<meta name="author" content="pixelhint.com">
 	<meta name="description" content="Resto HTML5/CSS3 Restaurant Home Page website Template"/>
 
@@ -12,7 +12,37 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/carouFredSel.js"></script>
     <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+        $(function() {
+            $.get('text.txt', function(data) {
+                let rozdelenaData = data.split(';');
+                let typy = '';
+				let LeveMenu = true;
+                for(let i = 0;i<rozdelenaData.length - 3;i = i + 4)
+                {
+					/*
+                    var txt3 = document.createElement("p");  // Create with DOM
+                    txt3.innerHTML = '<span style="color:blue">' + rozdelenaData[i] + '</span>' + rozdelenaData[i + 1] + rozdelenaData[i + 2];
+                    $("body").append (txt3);
+					*/
+					if(LeveMenu)
+					{
+					var txt3 = document.createElement("li");
+					txt3.innerHTML = '<div class="item_info"><h3 class="item_name">'+ rozdelenaData[i + 2] +'</h3></div><h4 class="price">'+ rozdelenaData[i + 3] +'Kč</h4><span class="separator"></span>';
+					$(".lmenu ul").append(txt3);
+					LeveMenu = false;
+					} else {
+						var txt3 = document.createElement("li");
+					txt3.innerHTML = '<div class="item_info"><h3 class="item_name">'+ rozdelenaData[i + 2] +'</h3></div><h4 class="price">'+ rozdelenaData[i + 3] +'Kč</h4><span class="separator"></span>';
+					$(".rmenu ul").append(txt3);
+					LeveMenu = true;
+					}
+
+                }
+            },'text');
+        });
+    </script>
 </head>
 <body>
 

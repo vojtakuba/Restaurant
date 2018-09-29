@@ -1,1 +1,1 @@
-100g;Parek;58;120g;Klobasa;87;68g;Sunka;45;asda;sad
+﻿Hlavní jídlo;100g;Parek;58;Polivka;120g;Klobasa;87;Zakusek;68g;Sunka;45;asda;sad
