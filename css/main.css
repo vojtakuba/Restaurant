@@ -227,8 +227,8 @@ header nav ul li a:hover{
 
 .hero .caption h4{
     color: #fff;
-    font-family: "aleo-regular", arial;
-    font-size: 16px;
+    font-family: "Gunny";
+    font-size: 50px;
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -244,6 +244,15 @@ header nav ul li a:hover{
     display: inline-block;
     background-color: #fff;
     vertical-align: middle;
+
+}
+
+.kurziva h4{
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    
+
 }
 
 .hero .caption .rsep{
